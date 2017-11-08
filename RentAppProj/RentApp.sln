@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAppWPF", "RentApp\RentAppWPF.csproj", "{988D6579-AA27-46C5-AC48-7B60609E633B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAppWPF", "RentAppWPF\RentAppWPF.csproj", "{988D6579-AA27-46C5-AC48-7B60609E633B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAppLogic", "RentAppLogic\RentAppLogic.csproj", "{62F008ED-58AC-413A-9EA9-06F4CF79B85D}"
 EndProject
