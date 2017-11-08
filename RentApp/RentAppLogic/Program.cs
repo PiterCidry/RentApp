@@ -10,6 +10,7 @@ namespace RentAppLogic
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
