@@ -8,6 +8,5 @@ namespace RentApp
 {
     class Fake
     {
-        string nazwa;
     }
 }
