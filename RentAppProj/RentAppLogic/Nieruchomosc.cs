@@ -1,18 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RentAppLogic
 {
-    class Nieruchomosc
+    public class Nieruchomosc
     {
         private string ulica;
         private string miasto;
         private int nrDomu;
-        private int nrMieszkania;
+        private int? nrMieszkania;
         private string kodPocztowy;
+
+
+        [Key]
+        public int Id { get; set; }
 
         public string Ulica
         {
@@ -53,7 +59,7 @@ namespace RentAppLogic
             }
         }
 
-        public int NrMieszkania
+        public int? NrMieszkania
         {
             get
             {

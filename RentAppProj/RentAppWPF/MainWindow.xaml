@@ -8,5 +8,6 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Label Content="TEST!" HorizontalAlignment="Left" Margin="233,136,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="52,44,0,0" VerticalAlignment="Top" Height="222" Width="427"/>
     </Grid>
 </Window>
