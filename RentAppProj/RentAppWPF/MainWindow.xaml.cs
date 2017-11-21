@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentAppLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace RentApp
         public MainWindow()
         {
             InitializeComponent();
+            using(var db = new RentContext())
+            {
+
+            }
         }
     }
 }
