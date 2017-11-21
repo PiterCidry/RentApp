@@ -1,5 +1,4 @@
-﻿using RentAppLogic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RentAppLogic;
 
 namespace RentApp
 {
@@ -24,10 +24,8 @@ namespace RentApp
         public MainWindow()
         {
             InitializeComponent();
-            using(var db = new RentContext())
-            {
+            var db = new RentContext();
 
-            }
         }
     }
 }

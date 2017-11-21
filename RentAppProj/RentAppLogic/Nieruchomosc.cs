@@ -5,30 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RentAppLogic
 {
     public class Nieruchomosc
     {
-        [Key]
-        private int id;
         private string ulica;
         private string miasto;
         private int nrDomu;
         private int? nrMieszkania;
         private string kodPocztowy;
 
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
 
-            set
-            {
-                id = value;
-            }
-        }
+        [Key]
+        public int Id { get; set; }
 
         public string Ulica
         {
@@ -93,18 +83,6 @@ namespace RentAppLogic
             {
                 kodPocztowy = value;
             }
-        }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("Mieszkanie przy ulicy: ").Append(this.Ulica).Append("\nNr domu: ").Append(this.NrDomu);
-            if(this.NrMieszkania != null)
-            {
-                sb.Append("/").Append(this.NrMieszkania);
-            }
-            sb.Append("\nKod pocztowy: ").Append(this.KodPocztowy).Append("\nMiasto: ").Append(this.Miasto);
-            return sb.ToString();
         }
     }
 }
