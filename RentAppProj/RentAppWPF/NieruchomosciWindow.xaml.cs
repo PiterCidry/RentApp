@@ -22,13 +22,14 @@ namespace RentApp
     public partial class NieruchomosciWindow : Window
     {
         public BazaNieruchomosci baza;
-        RentContext db;
+        public RentContext db;
+
         public NieruchomosciWindow()
         {
             InitializeComponent();
+            baza = new BazaNieruchomosci();
             db = new RentContext();
             gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList();
-            baza = new BazaNieruchomosci();
             //Nieruchomosci.ItemsSource = baza.nieruchomosci;
         }
 
@@ -36,10 +37,12 @@ namespace RentApp
         {
             Nieruchomosc n1 = new Nieruchomosc();
             Dodawanie d = new Dodawanie(n1);
-            if(d.ShowDialog() != false)
+            d.ShowDialog();
+            if(d.DialogResult != false)
             {
                 db.Nieruchomosci.Add(n1);
                 db.SaveChanges();
+                //baza.dodajNieruchomosc(n1);
             }
             gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList();
         }
@@ -47,12 +50,13 @@ namespace RentApp
         private void Usun_Click(object sender, RoutedEventArgs e)
         {
             Nieruchomosc n = gridNieruchomosci.SelectedItem as Nieruchomosc;
-            if(n != null && MessageBox.Show("Czy napewno?","Pytanie",MessageBoxButton.YesNo)==MessageBoxResult.Yes)
+            if(n != null && MessageBox.Show("Czy napewno?", "UWAGA!", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 db.Nieruchomosci.Remove(n);
                 db.SaveChanges();
+                //baza.usunNieruchomosc(n);
+                gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList();
             }
-            gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList(); 
         }
     }
 }

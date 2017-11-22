@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentApp"
         mc:Ignorable="d"
-        Title="NieruchomosciWindow" Height="300" Width="468.293">
+        Title="NieruchomosciWindow" Height="267.537" Width="456.716">
     <Grid>
-        <DataGrid x:Name="gridNieruchomosci" HorizontalAlignment="Left" Margin="40,19,0,0" VerticalAlignment="Top" Height="138" Width="384" AutoGenerateColumns="True">
-        </DataGrid>
+        <DataGrid x:Name="gridNieruchomosci" HorizontalAlignment="Left" Margin="40,19,0,0" VerticalAlignment="Top" Height="137" Width="367"/>
         <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="40,185,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
-        <Button x:Name="Usun" Content="Usun" HorizontalAlignment="Left" Margin="349,185,0,0" VerticalAlignment="Top" Width="75" Click="Usun_Click"/>
+        <Button x:Name="Usun" Content="Usun" HorizontalAlignment="Left" Margin="332,185,0,0" VerticalAlignment="Top" Width="75" Click="Usun_Click"/>
     </Grid>
 </Window>
