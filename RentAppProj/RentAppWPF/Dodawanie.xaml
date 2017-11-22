@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentApp"
         mc:Ignorable="d"
-        Title="Dodawanie" Height="300" Width="300">
+        Title="Dodawanie" Height="300" Width="339">
     <Grid>
-        <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="114,216,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
-        <TextBox x:Name="ulicaTB" HorizontalAlignment="Left" Height="23" Margin="164,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="NrDomuTB" HorizontalAlignment="Left" Height="23" Margin="164,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="MiastoTB" HorizontalAlignment="Left" Height="23" Margin="164,128,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="KodPocztowyTB" HorizontalAlignment="Left" Height="23" Margin="164,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="124,224,0,0" VerticalAlignment="Top" Width="76" Click="Dodaj_Click"/>
+        <TextBox x:Name="ulicaTB" HorizontalAlignment="Left" Height="23" Margin="164,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="NrDomuTB" HorizontalAlignment="Left" Height="23" Margin="164,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="51"/>
+        <TextBox x:Name="MiastoTB" HorizontalAlignment="Left" Height="23" Margin="164,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="KodPocztowyTB" HorizontalAlignment="Left" Height="23" Margin="164,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Ulica:" HorizontalAlignment="Left" Margin="26,37,0,0" VerticalAlignment="Top"/>
         <Label Content="Nr domu/mieszkania:" HorizontalAlignment="Left" Margin="26,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NrMieszkaniaTB" HorizontalAlignment="Left" Height="23" Margin="234,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.668,0.444"/>
         <Label Content="Miasto:" HorizontalAlignment="Left" Margin="26,124,0,0" VerticalAlignment="Top"/>
         <Label Content="Kod pocztowy:" HorizontalAlignment="Left" Margin="26,171,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="NrMieszkaniaTB" HorizontalAlignment="Left" Height="23" Margin="234,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.668,0.444"/>
         <Label Content="/" HorizontalAlignment="Left" Margin="215,85,0,0" VerticalAlignment="Top"/>
 
     </Grid>

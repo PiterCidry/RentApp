@@ -12,9 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RentAppLogic;
 
-namespace RentApp
+namespace RentAppMVVM
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,12 +23,6 @@ namespace RentApp
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void ButtonNieruchomosci_click(object sender, RoutedEventArgs e)
-        {
-            NieruchomosciWindow nw = new NieruchomosciWindow();
-            nw.ShowDialog();
         }
     }
 }

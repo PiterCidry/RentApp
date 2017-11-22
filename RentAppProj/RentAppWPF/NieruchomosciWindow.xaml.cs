@@ -22,12 +22,14 @@ namespace RentApp
     public partial class NieruchomosciWindow : Window
     {
         public BazaNieruchomosci baza;
-
+        RentContext db;
         public NieruchomosciWindow()
         {
             InitializeComponent();
+            db = new RentContext();
+            gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList();
             baza = new BazaNieruchomosci();
-            Nieruchomosci.ItemsSource = baza.nieruchomosci;
+            //Nieruchomosci.ItemsSource = baza.nieruchomosci;
         }
 
         private void Dodaj_Click(object sender, RoutedEventArgs e)
@@ -36,19 +38,21 @@ namespace RentApp
             Dodawanie d = new Dodawanie(n1);
             if(d.ShowDialog() != false)
             {
-                baza.dodajNieruchomosc(n1);
+                db.Nieruchomosci.Add(n1);
+                db.SaveChanges();
             }
-            Nieruchomosci.Items.Refresh();
+            gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList();
         }
 
         private void Usun_Click(object sender, RoutedEventArgs e)
         {
-            Nieruchomosc n = Nieruchomosci.SelectedItem as Nieruchomosc;
-            if(n != null)
+            Nieruchomosc n = gridNieruchomosci.SelectedItem as Nieruchomosc;
+            if(n != null && MessageBox.Show("Czy napewno?","Pytanie",MessageBoxButton.YesNo)==MessageBoxResult.Yes)
             {
-                baza.usunNieruchomosc(n);
+                db.Nieruchomosci.Remove(n);
+                db.SaveChanges();
             }
-            Nieruchomosci.Items.Refresh();
+            gridNieruchomosci.ItemsSource = db.Nieruchomosci.ToList(); 
         }
     }
 }
