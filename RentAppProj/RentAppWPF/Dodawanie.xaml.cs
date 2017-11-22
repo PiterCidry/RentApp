@@ -39,6 +39,7 @@ namespace RentApp
             n.NrDomu = Int32.Parse(NrDomuTB.Text);
             n.NrMieszkania = Int32.Parse(NrMieszkaniaTB.Text);
             n.Ulica = ulicaTB.Text;
+            DialogResult = true;
             this.Close();
         }
     }

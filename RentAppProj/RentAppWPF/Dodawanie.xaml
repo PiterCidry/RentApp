@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentApp"
         mc:Ignorable="d"
-        Title="Dodawanie" Height="300" Width="300">
+        Title="Dodawanie" Height="300" Width="330.224">
     <Grid>
         <Button x:Name="Dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="114,216,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
         <TextBox x:Name="ulicaTB" HorizontalAlignment="Left" Height="23" Margin="164,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>

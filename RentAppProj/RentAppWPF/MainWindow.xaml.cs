@@ -24,7 +24,6 @@ namespace RentApp
         public MainWindow()
         {
             InitializeComponent();
-            var db = new RentContext();
         }
 
         private void ButtonNieruchomosci_click(object sender, RoutedEventArgs e)
