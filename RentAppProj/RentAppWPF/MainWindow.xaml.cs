@@ -25,7 +25,12 @@ namespace RentApp
         {
             InitializeComponent();
             var db = new RentContext();
+        }
 
+        private void ButtonNieruchomosci_click(object sender, RoutedEventArgs e)
+        {
+            NieruchomosciWindow nw = new NieruchomosciWindow();
+            nw.ShowDialog();
         }
     }
 }

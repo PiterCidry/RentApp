@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="300.4" Width="385.8">
     <Grid>
-        <Label Content="TEST!" HorizontalAlignment="Left" Margin="233,136,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="52,44,0,0" VerticalAlignment="Top" Height="222" Width="427"/>
+        <Button x:Name="ButtonNieruchomosci" Content="Nieruchomosci" HorizontalAlignment="Left" Margin="32,36,0,0" VerticalAlignment="Top" Width="89" Click="ButtonNieruchomosci_click"/>
     </Grid>
 </Window>

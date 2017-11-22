@@ -9,7 +9,10 @@ namespace RentAppLogic
 {
     public class RentContext : DbContext
     {
-        public RentContext():base("baza1") { }
         public DbSet<Nieruchomosc> Nieruchomosci { get; set; }
+        public RentContext():base("baza1")
+        {
+
+        }
     }
 }
