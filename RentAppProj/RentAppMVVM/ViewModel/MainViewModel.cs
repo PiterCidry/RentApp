@@ -1,23 +1,21 @@
 using GalaSoft.MvvmLight;
 using RentAppLogic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
+using System.Linq;
 
 namespace RentAppMVVM.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private RentContext _ctx;
-        private ObservableCollection<Nieruchomosc> nieruchomosci;
+      private RentContext _ctx;
+      private ObservableCollection<Nieruchomosc> nieruchomosci;
+
         public ObservableCollection<Nieruchomosc> Nieruchomosci
         {
-            get
-            {
-                return nieruchomosci;
-            }
-            set
-            {
-                nieruchomosci = value;
-                
+            get { return nieruchomosci; }
+            set { nieruchomosci = value;
+                RaisePropertyChanged("Nieruchomosci");
             }
         }
 
@@ -29,7 +27,9 @@ namespace RentAppMVVM.ViewModel
 
         public void Refresh()
         {
-            Nieruchomosci = _ctx.Nieruchomosci.Local;
+            _ctx.Nieruchomosci.Load();
+            Nieruchomosci =_ctx.Nieruchomosci.Local;
+            return;
         }
     }
 }

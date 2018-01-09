@@ -4,14 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentAppMVVM"
+        xmlns:vm="clr-namespace:RentAppMVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Height="166" Width="337" ItemsSource="{Binding Nieruchomosc}">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="27,29,0,0" VerticalAlignment="Top" Height="220" Width="454" ItemsSource="{Binding Nieruchomosci}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Ulica" Binding="{Binding Ulica}" MinWidth="200"></DataGridTextColumn>
-                <DataGridTextColumn Header="Miasto" Binding="{Binding Miasto}" MinWidth="200"></DataGridTextColumn>
-        </DataGrid.Columns>
+                <DataGridTextColumn Header="Ulica" Binding="{Binding Ulica}" MinWidth="200"/>
+                <DataGridTextColumn Header="Miasto" Binding="{Binding Miasto}" MinWidth="100"/>
+
+            </DataGrid.Columns>
+            
         </DataGrid>
+
     </Grid>
 </Window>
